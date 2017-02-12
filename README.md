@@ -174,3 +174,28 @@ dbc1eec63f2df556: name=etcd1 peerURLs=http://172.28.128.21:2380 clientURLs=http:
 # ./etcdctl get foo/bar
 value=hello
 ```
+
+## Backup data
+
+```
+$ vagrant up etcd1
+$ sudo su
+# cd
+# export ETCDCTL_ENDPOINT=http://etcd1:2379
+# ./etcdctl backup --data-dir=/etcd_data/ --backup-dir=/backup/
+```
+
+Shutdown all `etcd`.
+
+
+## Restore data
+
+```
+$ vagrant up etcd1
+# mv /etcd_data/ /etcd_data2/
+$ sudo su
+# cd
+# source config
+# ./etcd -data-dir=/backup/ -force-new-cluster
+# ./etcd
+```
