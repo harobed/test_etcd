@@ -1,4 +1,4 @@
-# Test add a New Members to etcd
+# Test add news members to etcd
 
 ## In terminal 1 (etcd0)
 
