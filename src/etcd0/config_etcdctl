@@ -1,0 +1,1 @@
+export ETCDCTL_ENDPOINT=http://etcd0:2379
