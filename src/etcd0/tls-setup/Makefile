@@ -30,6 +30,11 @@ req:
 	  -ca-key certs/ca-key.pem \
 	  -config config/ca-config.json \
 	  config/req-csr.json | $(JSON) -bare certs/etcd2
+	$(CFSSL) gencert \
+	  -ca certs/ca.pem \
+	  -ca-key certs/ca-key.pem \
+	  -config config/ca-config.json \
+	  config/req-csr.json | $(JSON) -bare certs/etcdctl
 
 clean:
 	rm -rf certs

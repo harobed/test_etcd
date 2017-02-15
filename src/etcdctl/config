@@ -1,1 +1,8 @@
-export ETCDCTL_ENDPOINT=http://etcd0:2379
+export ETCDCTL_ENDPOINT=https://etcd0:2379
+export ETCDCTL_CACERT=/root/certs/ca.pem
+export ETCDCTL_CERT=/root/certs/etcdctl.pem
+export ETCDCTL_KEY=/root/certs/etcdctl-key.pem
+
+export ETCDCTL_CA_FILE=/root/certs/ca.pem
+export ETCDCTL_CERT_FILE=/root/certs/etcdctl.pem
+export ETCDCTL_KEY_FILE=/root/certs/etcdctl-key.pem

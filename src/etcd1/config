@@ -2,14 +2,18 @@ export ETCD_INITIAL_CLUSTER_TOKEN="stephanetoken"
 export ETCD_DATA_DIR=/etcd_data/
 export ETCD_NAME="etcd1"
 
-export ETCD_ADVERTISE_CLIENT_URLS=http://etcd1:2379
+export ETCD_ADVERTISE_CLIENT_URLS=https://etcd1:2379
 
-export ETCD_LISTEN_CLIENT_URLS=http://0.0.0.0:2379
+export ETCD_LISTEN_CLIENT_URLS=https://0.0.0.0:2379
 export ETCD_LISTEN_PEER_URLS=https://0.0.0.0:2380
 
 export ETCD_INITIAL_ADVERTISE_PEER_URLS=https://etcd1:2380
 export ETCD_INITIAL_CLUSTER="etcd0=https://etcd0:2380,etcd1=https://etcd1:2380"
 export ETCD_INITIAL_CLUSTER_STATE="existing"
+
+export ETCD_CA_FILE=/root/certs/ca.pem
+export ETCD_CERT_FILE=/root/certs/etcd1.pem
+export ETCD_KEY_FILE=/root/certs/etcd1-key.pem
 
 export ETCD_PEER_CA_FILE=/root/certs/ca.pem
 export ETCD_PEER_CERT_FILE=/root/certs/etcd1.pem
